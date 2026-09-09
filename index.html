@@ -1,411 +1,296 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta name="description" content="GAIA TALENTS BRASIL — um espaço para apresentar realidades, problemas, ideias, soluções, habilidades e experiências.">
+  <title>GAIA TALENTS BRASIL™</title>
 
-  <title>GAIA TALENTS BRASIL | Quem pode contribuir?</title>
+  <meta
+    name="description"
+    content="GAIA TALENTS BRASIL™ — Um espaço para descobrir pessoas e capacidades."
+  >
 
   <style>
-    :root{
-      --bg:#07100d;
-      --bg2:#0d1814;
-      --card:#12221b;
-      --text:#f4f7f5;
-      --muted:#b8c5bf;
-      --accent:#c8a85b;
-      --accent2:#e1c879;
-      --line:rgba(255,255,255,.10);
-      --max:1050px;
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
 
-    *{
-      box-sizing:border-box;
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f7f8f6;
+      color: #202820;
+      line-height: 1.6;
     }
 
-    html{
-      scroll-behavior:smooth;
+    header {
+      background: #ffffff;
+      border-bottom: 1px solid #e4e7e2;
+      padding: 22px 20px;
     }
 
-    body{
-      margin:0;
-      font-family:Arial,Helvetica,sans-serif;
-      background:var(--bg);
-      color:var(--text);
-      line-height:1.6;
+    .header-inner {
+      max-width: 1100px;
+      margin: auto;
+      text-align: center;
     }
 
-    a{
-      color:inherit;
-      text-decoration:none;
+    .brand {
+      font-size: 1.35rem;
+      font-weight: 800;
+      letter-spacing: 0.5px;
     }
 
-    .wrap{
-      width:min(92%,var(--max));
-      margin:auto;
+    .edition {
+      margin-top: 5px;
+      font-size: 0.9rem;
+      color: #687168;
     }
 
-    nav{
-      position:sticky;
-      top:0;
-      z-index:20;
-      background:rgba(7,16,13,.96);
-      border-bottom:1px solid var(--line);
-      backdrop-filter:blur(8px);
+    .hero {
+      background: #ffffff;
+      padding: 70px 20px 65px;
+      text-align: center;
     }
 
-    .navin{
-      min-height:68px;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:20px;
+    .hero-inner {
+      max-width: 900px;
+      margin: auto;
     }
 
-    .brand{
-      font-weight:800;
-      letter-spacing:.05em;
-      font-size:14px;
+    .hero h1 {
+      font-size: clamp(2rem, 6vw, 4rem);
+      line-height: 1.05;
+      margin-bottom: 20px;
+      font-weight: 900;
     }
 
-    .navlinks{
-      display:flex;
-      gap:22px;
-      font-size:13px;
-      color:var(--muted);
+    .hero h2 {
+      font-size: clamp(1.2rem, 3vw, 1.8rem);
+      margin-bottom: 25px;
+      font-weight: 700;
     }
 
-    .navlinks a:hover{
-      color:var(--text);
+    .hero p {
+      max-width: 720px;
+      margin: auto;
+      font-size: 1.08rem;
+      color: #505850;
     }
 
-    header{
-      padding:90px 0 75px;
-      background:
-        radial-gradient(
-          circle at 50% 0,
-          rgba(200,168,91,.17),
-          transparent 45%
-        ),
-        linear-gradient(
-          180deg,
-          var(--bg2),
-          var(--bg)
-        );
-      text-align:center;
+    .button {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 16px 28px;
+      background: #1f5f3b;
+      color: #ffffff;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 800;
+      font-size: 1rem;
     }
 
-    .eyebrow{
-      display:inline-block;
-      color:var(--accent2);
-      font-size:13px;
-      font-weight:800;
-      letter-spacing:.12em;
-      text-transform:uppercase;
-      margin-bottom:18px;
+    .section {
+      padding: 60px 20px;
     }
 
-    h1{
-      max-width:900px;
-      margin:0 auto 20px;
-      font-size:clamp(42px,8vw,78px);
-      line-height:.98;
-      letter-spacing:-.04em;
+    .section-inner {
+      max-width: 1000px;
+      margin: auto;
     }
 
-    .lead{
-      max-width:760px;
-      margin:0 auto 30px;
-      color:var(--muted);
-      font-size:clamp(18px,3vw,24px);
+    .section h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 25px;
     }
 
-    .btn{
-      display:inline-block;
-      background:var(--accent);
-      color:#111;
-      padding:14px 22px;
-      border-radius:8px;
-      font-weight:800;
-      border:0;
-      cursor:pointer;
-      font-size:15px;
+    .intro {
+      max-width: 760px;
+      margin: auto;
+      text-align: center;
+      color: #555d56;
+      font-size: 1.05rem;
     }
 
-    .btn:hover{
-      background:var(--accent2);
+    .highlight {
+      background: #edf3ee;
     }
 
-    section{
-      padding:70px 0;
-      border-top:1px solid var(--line);
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 18px;
+      margin-top: 35px;
     }
 
-    h2{
-      margin:0 0 18px;
-      font-size:clamp(30px,5vw,48px);
-      line-height:1.05;
+    .card {
+      background: #ffffff;
+      border: 1px solid #e1e6e1;
+      border-radius: 12px;
+      padding: 25px;
     }
 
-    .intro{
-      max-width:800px;
-      color:var(--muted);
-      font-size:18px;
+    .card h3 {
+      font-size: 1.1rem;
+      margin-bottom: 10px;
     }
 
-    .notice{
-      margin-top:30px;
-      padding:26px;
-      border:1px solid rgba(225,200,121,.35);
-      background:rgba(200,168,91,.08);
-      border-radius:12px;
+    .card p {
+      color: #596159;
+      font-size: 0.96rem;
     }
 
-    .notice strong{
-      display:block;
-      color:var(--accent2);
-      font-size:20px;
-      margin-bottom:8px;
+    .process {
+      margin-top: 35px;
+      display: grid;
+      gap: 15px;
     }
 
-    .steps{
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:16px;
-      margin-top:35px;
+    .step {
+      background: #ffffff;
+      border-left: 5px solid #1f5f3b;
+      padding: 20px;
+      border-radius: 7px;
     }
 
-    .card{
-      background:var(--card);
-      border:1px solid var(--line);
-      border-radius:12px;
-      padding:25px;
+    .step strong {
+      display: block;
+      margin-bottom: 5px;
     }
 
-    .number{
-      color:var(--accent2);
-      font-weight:900;
-      font-size:14px;
-      letter-spacing:.1em;
+    .notice {
+      max-width: 760px;
+      margin: 35px auto 0;
+      background: #fff8df;
+      border: 1px solid #eadca7;
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+      font-weight: 800;
     }
 
-    .card h3{
-      margin:9px 0 8px;
-      font-size:21px;
+    .recognition {
+      text-align: center;
     }
 
-    .card p{
-      margin:0;
-      color:var(--muted);
+    .certificate {
+      max-width: 600px;
+      margin: 30px auto 0;
+      background: #ffffff;
+      border: 1px solid #dfe4df;
+      border-radius: 12px;
+      padding: 30px;
     }
 
-    .quote{
-      margin:35px 0 0;
-      padding:34px;
-      border-left:4px solid var(--accent);
-      background:rgba(255,255,255,.035);
-      border-radius:0 12px 12px 0;
+    .certificate h3 {
+      margin-bottom: 10px;
     }
 
-    .quote p{
-      margin:0;
-      font-size:clamp(25px,4vw,38px);
-      font-weight:800;
-      line-height:1.18;
+    form {
+      max-width: 720px;
+      margin: 35px auto 0;
+      background: #ffffff;
+      padding: 30px;
+      border-radius: 12px;
+      border: 1px solid #dfe4df;
     }
 
-    .grid{
-      display:grid;
-      grid-template-columns:repeat(2,1fr);
-      gap:16px;
-      margin-top:30px;
-    }
-
-    .highlight{
-      margin-top:30px;
-      padding:28px;
-      background:var(--card);
-      border:1px solid var(--line);
-      border-radius:12px;
-    }
-
-    .highlight strong{
-      color:var(--accent2);
-      font-size:20px;
-    }
-
-    .highlight p{
-      color:var(--muted);
-      margin-bottom:0;
-    }
-
-    .certificate{
-      margin-top:30px;
-      padding:28px;
-      background:var(--card);
-      border-radius:12px;
-      border:1px solid var(--line);
-    }
-
-    .certificate strong{
-      color:var(--accent2);
-      font-size:20px;
-    }
-
-    .plate{
-      margin-top:16px;
-      padding:28px;
-      background:rgba(200,168,91,.08);
-      border-radius:12px;
-      border:1px solid rgba(225,200,121,.30);
-    }
-
-    .plate strong{
-      color:var(--accent2);
-      font-size:20px;
-    }
-
-    .participate{
-      text-align:center;
-      background:
-        radial-gradient(
-          circle at 50% 50%,
-          rgba(200,168,91,.10),
-          transparent 55%
-        );
-    }
-
-    .participate > .wrap > p{
-      max-width:720px;
-      margin:0 auto 25px;
-      color:var(--muted);
-      font-size:18px;
-    }
-
-    .form{
-      max-width:650px;
-      margin:30px auto 0;
-      text-align:left;
-      display:grid;
-      gap:16px;
-    }
-
-    label{
-      font-weight:700;
-      font-size:14px;
+    label {
+      display: block;
+      margin-bottom: 7px;
+      font-weight: 700;
     }
 
     input,
-    textarea,
-    select{
-      width:100%;
-      margin-top:6px;
-      padding:13px 14px;
-      border:1px solid var(--line);
-      border-radius:8px;
-      background:#0b1712;
-      color:var(--text);
-      font:inherit;
+    select,
+    textarea {
+      width: 100%;
+      padding: 13px;
+      border: 1px solid #cdd4cd;
+      border-radius: 7px;
+      font: inherit;
+      margin-bottom: 20px;
+      background: #ffffff;
     }
 
-    input:focus,
-    textarea:focus,
-    select:focus{
-      outline:2px solid rgba(225,200,121,.45);
-      border-color:var(--accent);
+    textarea {
+      min-height: 150px;
+      resize: vertical;
     }
 
-    textarea{
-      min-height:150px;
-      resize:vertical;
+    .checkbox {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      font-weight: normal;
+      font-size: 0.9rem;
+      color: #555d56;
+      margin-bottom: 20px;
     }
 
-    .consent{
-      display:flex;
-      align-items:flex-start;
-      gap:10px;
-      padding:14px;
-      background:rgba(255,255,255,.035);
-      border:1px solid var(--line);
-      border-radius:8px;
-      color:var(--muted);
-      font-size:13px;
+    .checkbox input {
+      width: auto;
+      margin-top: 5px;
+      margin-bottom: 0;
     }
 
-    .consent input{
-      width:auto;
-      margin:3px 0 0;
-      flex-shrink:0;
+    .security {
+      font-size: 0.86rem;
+      color: #687168;
+      margin-bottom: 20px;
     }
 
-    .security{
-      margin-top:8px;
-      padding:16px;
-      border-radius:8px;
-      background:rgba(45,120,80,.10);
-      border:1px solid rgba(100,180,130,.20);
-      color:#b9d5c4;
-      font-size:13px;
-      line-height:1.5;
+    .submit {
+      width: 100%;
+      border: none;
+      cursor: pointer;
+      background: #1f5f3b;
+      color: #ffffff;
+      padding: 16px;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 800;
     }
 
-    .security strong{
-      color:#d7eadc;
+    .final-message {
+      margin-top: 28px;
+      text-align: center;
+      font-size: 1.05rem;
     }
 
-    .small{
-      color:#9eaaa5;
-      font-size:13px;
-      margin-top:4px;
-      text-align:center;
+    .final-message strong {
+      display: block;
+      margin: 7px 0;
     }
 
-    footer{
-      padding:35px 0 45px;
-      border-top:1px solid var(--line);
-      color:#98a49f;
-      font-size:13px;
+    footer {
+      background: #151b16;
+      color: #dce2dc;
+      text-align: center;
+      padding: 35px 20px;
+      font-size: 0.9rem;
     }
 
-    .signature{
-      margin-top:14px;
-      color:var(--text);
-      font-weight:700;
+    footer p {
+      margin: 5px 0;
     }
 
-    .footer-note{
-      max-width:800px;
-      margin-top:16px;
-      line-height:1.6;
+    .signature {
+      margin-top: 18px;
+      font-weight: 800;
+      color: #ffffff;
     }
 
-    @media(max-width:760px){
-
-      .navlinks{
-        display:none;
+    @media (max-width: 600px) {
+      .hero {
+        padding-top: 50px;
       }
 
-      header{
-        padding:70px 0 60px;
-      }
-
-      section{
-        padding:55px 0;
-      }
-
-      .steps,
-      .grid{
-        grid-template-columns:1fr;
-      }
-
-      .card{
-        padding:21px;
-      }
-
-      h1{
-        font-size:clamp(40px,13vw,60px);
+      form {
+        padding: 22px;
       }
     }
   </style>
@@ -413,418 +298,175 @@
 
 <body>
 
-  <nav>
-    <div class="wrap navin">
-
-      <div class="brand">
-        GAIA TALENTS BRASIL™
-      </div>
-
-      <div class="navlinks">
-
-        <a href="#sobre">
-          O QUE É
-        </a>
-
-        <a href="#como">
-          COMO FUNCIONA
-        </a>
-
-        <a href="#reconhecimento">
-          RECONHECIMENTO
-        </a>
-
-        <a href="#participar">
-          PARTICIPAR
-        </a>
-
-      </div>
-
-    </div>
-  </nav>
-
-
   <header>
-
-    <div class="wrap">
-
-      <div class="eyebrow">
-        GAIA TALENTS BRASIL™
-      </div>
-
-      <h1>
-        UMA REALIDADE PRECISA DE UMA SOLUÇÃO.
-      </h1>
-
-      <p class="lead">
-
-        <strong>
-          QUEM PODE CONTRIBUIR?
-        </strong>
-
-        <br>
-
-        Apresente uma realidade, um problema,
-        uma ideia, uma solução, uma habilidade
-        ou uma experiência.
-
-      </p>
-
-      <a
-        class="btn"
-        href="#participar"
-      >
-        APRESENTAR MINHA CONTRIBUIÇÃO
-      </a>
-
+    <div class="header-inner">
+      <div class="brand">GAIA TALENTS BRASIL™</div>
+      <div class="edition">Seleção Nacional • 1ª Edição</div>
     </div>
-
   </header>
-
 
   <main>
 
+    <section class="hero">
+      <div class="hero-inner">
 
-    <section id="sobre">
+        <h1>O TALENTO PODE ESTAR EM QUALQUER LUGAR.</h1>
 
-      <div class="wrap">
+        <h2>MOSTRE O QUE VOCÊ SABE FAZER.</h2>
 
-        <h2>
-          O que é o GAIA TALENTS BRASIL?
-        </h2>
-
-        <p class="intro">
-
-          O GAIA TALENTS BRASIL é uma iniciativa
-          para conhecer pessoas e descobrir capacidades.
-
+        <p>
+          Uma ideia, uma realidade, uma solução, uma habilidade,
+          um conhecimento ou uma experiência podem revelar uma capacidade.
         </p>
 
-        <p class="intro">
+        <a href="#participar" class="button">
+          APRESENTE SUA IDEIA.
+        </a>
 
+      </div>
+    </section>
+
+
+    <section class="section">
+      <div class="section-inner">
+
+        <h2>O QUE É O GAIA TALENTS?</h2>
+
+        <p class="intro">
+          Um espaço para descobrir pessoas e capacidades que muitas vezes
+          permanecem escondidas.
+        </p>
+
+        <div class="cards">
+
+          <div class="card">
+            <h3>VOCÊ CONHECE UMA REALIDADE?</h3>
+            <p>
+              Apresente uma situação, um problema ou algo que precisa ser compreendido.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>VOCÊ TEM UMA IDEIA?</h3>
+            <p>
+              Mostre uma ideia que possa contribuir para uma realidade.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>VOCÊ TEM UMA SOLUÇÃO?</h3>
+            <p>
+              Apresente aquilo que você acredita que pode funcionar.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>VOCÊ TEM UMA HABILIDADE?</h3>
+            <p>
+              Mostre o que você sabe fazer, construir, analisar ou desenvolver.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>VOCÊ TEM EXPERIÊNCIA?</h3>
+            <p>
+              Seu conhecimento e sua experiência também podem revelar capacidades.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <section class="section highlight">
+      <div class="section-inner">
+
+        <h2>COMO FUNCIONA</h2>
+
+        <p class="intro">
           Uma realidade pode ser apresentada por qualquer pessoa.
-          Uma solução pode vir de qualquer pessoa.
-          Uma habilidade pode aparecer em qualquer lugar.
-
+          Uma contribuição pode vir de qualquer pessoa.
+          Uma capacidade pode aparecer em qualquer lugar.
         </p>
+
+        <div class="process">
+
+          <div class="step">
+            <strong>1. REALIDADE</strong>
+            Uma situação real é apresentada.
+          </div>
+
+          <div class="step">
+            <strong>2. IDEIA OU DESAFIO</strong>
+            A realidade pode revelar uma pergunta, um problema ou uma possibilidade.
+          </div>
+
+          <div class="step">
+            <strong>3. CONTRIBUIÇÃO</strong>
+            Pessoas apresentam conhecimento, experiência, habilidade ou solução.
+          </div>
+
+          <div class="step">
+            <strong>4. DESCOBERTA</strong>
+            A contribuição permite conhecer melhor aquilo que a pessoa sabe e consegue fazer.
+          </div>
+
+          <div class="step">
+            <strong>5. CAPACIDADE</strong>
+            O talento aparece por aquilo que a pessoa apresenta.
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <section class="section recognition">
+      <div class="section-inner">
+
+        <h2>RECONHECIMENTO</h2>
 
         <p class="intro">
-
-          Jovem, adulto ou idoso.
-          Estudante, profissional, empreendedor
-          ou alguém com experiência de vida.
-
+          A participação no GAIA TALENTS pode receber certificado de
+          participação e contribuição, conforme os critérios da iniciativa.
         </p>
-
-
-        <div class="notice">
-
-          <strong>
-            NÃO É VAGA DE EMPREGO.
-          </strong>
-
-          É um espaço aberto para que pessoas apresentem
-          aquilo que conhecem, pensam e sabem fazer.
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <section id="como">
-
-      <div class="wrap">
-
-        <h2>
-          Como funciona?
-        </h2>
-
-
-        <div class="steps">
-
-
-          <article class="card">
-
-            <div class="number">
-              01
-            </div>
-
-            <h3>
-              APRESENTE
-            </h3>
-
-            <p>
-
-              Uma realidade, um problema,
-              uma ideia, uma solução,
-              uma habilidade ou uma experiência.
-
-            </p>
-
-          </article>
-
-
-          <article class="card">
-
-            <div class="number">
-              02
-            </div>
-
-            <h3>
-              MOSTRE
-            </h3>
-
-            <p>
-
-              Mostre como você enxerga a situação,
-              como pensa e o que sabe fazer.
-
-            </p>
-
-          </article>
-
-
-          <article class="card">
-
-            <div class="number">
-              03
-            </div>
-
-            <h3>
-              CONTRIBUA
-            </h3>
-
-            <p>
-
-              Sua contribuição pode ajudar a aproximar
-              diferentes conhecimentos e capacidades.
-
-            </p>
-
-          </article>
-
-
-        </div>
-
-
-        <div class="quote">
-
-          <p>
-
-            UMA REALIDADE PODE ENCONTRAR
-            QUEM SABE COMO CONTRIBUIR.
-
-          </p>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <section>
-
-      <div class="wrap">
-
-        <h2>
-          Não precisa saber tudo.
-        </h2>
-
-        <p class="intro">
-
-          Quem conhece uma realidade pode apresentá-la.
-          Quem entende de uma área pode apresentar uma solução.
-          Quem possui uma habilidade pode mostrar o que sabe fazer.
-
-        </p>
-
-
-        <div class="grid">
-
-
-          <article class="card">
-
-            <h3>
-              VOCÊ CONHECE O PROBLEMA?
-            </h3>
-
-            <p>
-              Apresente a realidade que você conhece.
-            </p>
-
-          </article>
-
-
-          <article class="card">
-
-            <h3>
-              VOCÊ TEM UMA SOLUÇÃO?
-            </h3>
-
-            <p>
-              Mostre como você resolveria.
-            </p>
-
-          </article>
-
-
-          <article class="card">
-
-            <h3>
-              VOCÊ TEM UMA HABILIDADE?
-            </h3>
-
-            <p>
-              Apresente aquilo que sabe fazer.
-            </p>
-
-          </article>
-
-
-          <article class="card">
-
-            <h3>
-              VOCÊ TEM EXPERIÊNCIA?
-            </h3>
-
-            <p>
-              Conte o que aprendeu fazendo.
-            </p>
-
-          </article>
-
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <section>
-
-      <div class="wrap">
-
-        <h2>
-          Um exemplo.
-        </h2>
-
-        <p class="intro">
-
-          Uma pessoa pode apresentar um problema de uma cidade.
-          Outra pode conhecer profundamente aquela área.
-          Outra pode ter uma ideia.
-          Outra pode saber construir a solução.
-
-        </p>
-
-
-        <div class="highlight">
-
-          <strong>
-            NÃO IMPORTA QUEM APARECE PRIMEIRO.
-          </strong>
-
-          <p>
-
-            O importante é que uma realidade encontre
-            pessoas capazes de contribuir.
-
-          </p>
-
-        </div>
-
-
-        <div class="quote">
-
-          <p>
-
-            QUEM TEM UMA CONTRIBUIÇÃO,
-            TEM ESPAÇO PARA APRESENTÁ-LA.
-
-          </p>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <section id="reconhecimento">
-
-      <div class="wrap">
-
-        <h2>
-          Reconhecimento
-        </h2>
-
 
         <div class="certificate">
 
-          <strong>
-            CERTIFICADO
-          </strong>
+          <h3>📜 CERTIFICADO</h3>
 
-          <p style="color:var(--muted)">
-
-            Participantes que cumprirem as condições previstas
-            na iniciativa poderão receber certificado de participação
-            e reconhecimento, conforme as regras estabelecidas.
-
+          <p>
+            Reconhecimento pela participação e pela contribuição apresentada
+            no GAIA TALENTS BRASIL™.
           </p>
 
-        </div>
-
-
-        <div class="plate">
-
-          <strong>
-            PLACA DE RECONHECIMENTO
-          </strong>
-
-          <p style="color:var(--muted)">
-
-            Contribuições de destaque poderão receber uma placa
-            de reconhecimento, conforme os critérios definidos
-            para a iniciativa.
-
+          <p style="margin-top:15px;">
+            <strong>Participação gratuita.</strong>
           </p>
 
         </div>
 
       </div>
-
     </section>
 
 
-    <section
-      id="participar"
-      class="participate"
-    >
+    <section class="section highlight" id="participar">
+      <div class="section-inner">
 
-      <div class="wrap">
+        <h2>APRESENTE SUA IDEIA.</h2>
 
-        <h2>
-          Tem uma contribuição?
-        </h2>
-
-        <p>
-
-          Conte o que você quer apresentar.
-
-          Pode ser uma realidade, um problema,
-          uma ideia, uma solução, uma habilidade
-          ou uma experiência.
-
+        <p class="intro">
+          Conte aquilo que você sabe, conhece, faz ou acredita que pode contribuir.
         </p>
 
+        <div class="notice">
+          IMPORTANTE: NÃO É VAGA DE EMPREGO.
+        </div>
 
         <form
-          class="form"
           action="https://formsubmit.co/gaiatechglobal@gmail.com"
           method="POST"
         >
@@ -853,198 +495,130 @@
             value="https://reinaldoadeodato-ops.github.io/gaia-talents-brasil/"
           >
 
+          <label for="nome">Nome</label>
 
-          <div>
+          <input
+            type="text"
+            id="nome"
+            name="nome"
+            required
+          >
 
-            <label for="nome">
-              Seu nome
-            </label>
+          <label for="local">Cidade / Estado</label>
+
+          <input
+            type="text"
+            id="local"
+            name="cidade_estado"
+            required
+          >
+
+          <label for="tipo">
+            O que você quer apresentar?
+          </label>
+
+          <select
+            id="tipo"
+            name="tipo_contribuicao"
+            required
+          >
+            <option value="">Selecione</option>
+
+            <option value="Realidade ou problema">
+              Uma realidade ou problema
+            </option>
+
+            <option value="Ideia">
+              Uma ideia
+            </option>
+
+            <option value="Solução">
+              Uma solução
+            </option>
+
+            <option value="Habilidade">
+              Uma habilidade
+            </option>
+
+            <option value="Conhecimento">
+              Um conhecimento
+            </option>
+
+            <option value="Experiência">
+              Uma experiência
+            </option>
+
+          </select>
+
+          <label for="contribuicao">
+            Apresente sua ideia
+          </label>
+
+          <textarea
+            id="contribuicao"
+            name="contribuicao"
+            placeholder="Conte com suas palavras."
+            required
+          ></textarea>
+
+          <div class="security">
+            O envio é realizado por conexão HTTPS.
+            Não envie senhas, documentos, dados bancários ou informações
+            pessoais sensíveis.
+          </div>
+
+          <label class="checkbox">
 
             <input
-              id="nome"
-              name="Nome"
-              type="text"
-              autocomplete="name"
-              required
-            >
-
-          </div>
-
-
-          <div>
-
-            <label for="local">
-              Cidade e estado
-            </label>
-
-            <input
-              id="local"
-              name="Cidade e Estado"
-              type="text"
-              autocomplete="address-level2"
-              required
-            >
-
-          </div>
-
-
-          <div>
-
-            <label for="tipo">
-              O que você quer apresentar?
-            </label>
-
-            <select
-              id="tipo"
-              name="Tipo de contribuição"
-              required
-            >
-
-              <option value="">
-                Escolha uma opção
-              </option>
-
-              <option>
-                Uma realidade
-              </option>
-
-              <option>
-                Um problema
-              </option>
-
-              <option>
-                Uma ideia
-              </option>
-
-              <option>
-                Uma solução
-              </option>
-
-              <option>
-                Uma habilidade
-              </option>
-
-              <option>
-                Uma experiência
-              </option>
-
-            </select>
-
-          </div>
-
-
-          <div>
-
-            <label for="contribuicao">
-              Conte para nós
-            </label>
-
-            <textarea
-              id="contribuicao"
-              name="Contribuição"
-              required
-            ></textarea>
-
-          </div>
-
-
-          <div class="consent">
-
-            <input
-              id="consentimento"
-              name="Consentimento"
               type="checkbox"
+              name="consentimento"
               value="Sim"
               required
             >
 
-            <label for="consentimento">
+            <span>
+              Concordo com o uso dos dados enviados para análise da
+              contribuição apresentada, conforme as informações de proteção
+              de dados desta iniciativa.
+            </span>
 
-              Concordo com o envio das informações
-              para participação no GAIA TALENTS BRASIL.
+          </label>
 
-            </label>
-
-          </div>
-
-
-          <div class="security">
-
-            <strong>
-              Proteção das informações
-            </strong>
-
-            <br>
-
-            O envio deste formulário é realizado
-            por conexão HTTPS.
-
-            <br><br>
-
-            Não envie senhas, documentos, dados bancários
-            ou outras informações pessoais sensíveis.
-
-          </div>
-
-
-          <button
-            class="btn"
-            type="submit"
-          >
-            APRESENTAR MINHA CONTRIBUIÇÃO
+          <button type="submit" class="submit">
+            ENVIAR CONTRIBUIÇÃO
           </button>
 
-
-          <div class="small">
-
-            Preencheu a ideia.
-
-            <br>
-
-            <strong>
-              NÃO É VAGA DE EMPREGO.
-            </strong>
-
-            <br>
-
-            OBRIGADO.
-
+          <div class="final-message">
+            <strong>Preencheu a ideia.</strong>
+            <strong>NÃO É VAGA DE EMPREGO.</strong>
+            <strong>OBRIGADO.</strong>
           </div>
 
         </form>
 
       </div>
-
     </section>
-
 
   </main>
 
 
   <footer>
 
-    <div class="wrap">
+    <p>GAIA TALENTS BRASIL™</p>
 
-      <div>
-        GAIA TALENTS BRASIL™
-      </div>
+    <p>
+      Descobrir capacidades. Dar visibilidade ao talento.
+    </p>
 
-      <div class="signature">
-        Direção Geral — Reinaldo Adeodato — CEO/FOUNDER GAIATECH GLOBAL
-      </div>
+    <p class="signature">
+      Direção Geral — Reinaldo Adeodato — CEO/FOUNDER GAIATECH GLOBAL
+    </p>
 
-      <div class="footer-note">
-
-        GAIA TALENTS BRASIL™ — uma iniciativa da GAIATECH GLOBAL
-        para conhecer pessoas, capacidades, conhecimentos,
-        experiências e contribuições.
-
-      </div>
-
-    </div>
+    <p style="margin-top:15px;">
+      © 2026 GAIATECH GLOBAL. Todos os direitos reservados.
+    </p>
 
   </footer>
-
 
 </body>
 </html>
