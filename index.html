@@ -1,88 +1,649 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="GAIA TALENTS BRASIL™ — Seleção Nacional de Jovens para Construção de Infraestruturas.">
-<title>GAIA TALENTS BRASIL™ | Seleção Nacional</title>
-<style>
-:root{--bg:#07100d;--panel:#0d1a15;--text:#f2f7f4;--muted:#a9bbb3;--line:#234136;--accent:#64d49a;--max:1120px}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.6}
-a{color:inherit;text-decoration:none}.wrap{max-width:var(--max);margin:auto;padding:0 24px}
-nav{position:sticky;top:0;z-index:20;background:rgba(7,16,13,.92);backdrop-filter:blur(12px);border-bottom:1px solid rgba(100,212,154,.12)}
-.navin{height:70px;display:flex;align-items:center;justify-content:space-between}.brand{font-weight:800;letter-spacing:.08em;font-size:14px}.brand span{color:var(--accent)}
-.navlinks{display:flex;gap:24px;font-size:13px;color:var(--muted)}
-.hero{padding:100px 0 82px;background:radial-gradient(circle at 80% 20%,rgba(100,212,154,.12),transparent 34%),linear-gradient(180deg,#09150f 0%,var(--bg) 100%)}
-.eyebrow,.kicker{color:var(--accent);font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase}
-.hero h1{font-size:clamp(42px,7vw,82px);line-height:.98;letter-spacing:-.055em;max-width:900px;margin:18px 0 24px}.hero h1 span{color:var(--accent)}
-.lead{font-size:clamp(20px,3vw,29px);color:#dbe9e2}.chips{display:flex;gap:10px;flex-wrap:wrap;margin:25px 0 38px}.chip{border:1px solid var(--line);padding:7px 12px;border-radius:999px;color:var(--muted);font-size:13px}
-.btn{display:inline-flex;border-radius:9px;padding:14px 22px;font-weight:800;background:var(--accent);color:#06100b}
-section{padding:78px 0;border-top:1px solid rgba(255,255,255,.06)}.grid2{display:grid;grid-template-columns:1fr 1fr;gap:45px}
-h2{font-size:clamp(30px,4vw,50px);line-height:1.05;letter-spacing:-.035em;margin:10px 0 18px}h3{margin:0 0 9px;font-size:20px}p{color:var(--muted);font-size:17px}
-.quote{font-size:clamp(28px,4vw,47px);line-height:1.12;font-weight:750;border-left:3px solid var(--accent);padding-left:24px}
-.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:32px}.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:25px}.num{color:var(--accent);font-weight:900;font-size:12px;letter-spacing:.12em}
-.flow{display:flex;flex-wrap:wrap;gap:9px;margin-top:30px}.flow span{border:1px solid var(--line);background:var(--panel);padding:10px 13px;border-radius:8px;font-weight:700;font-size:14px}.flow b{color:var(--accent);align-self:center}
-.regions{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-top:30px}.region{padding:18px 12px;border:1px solid var(--line);border-radius:10px;text-align:center;background:var(--panel)}
-.security{background:var(--panel);border:1px solid #2a5a45;border-radius:18px;padding:30px}.security li{color:var(--muted);margin:8px 0}
-.cta{padding:90px 0;text-align:center;background:radial-gradient(circle at 50% 30%,rgba(100,212,154,.12),transparent 42%)}.cta p{max-width:700px;margin:0 auto 28px}
-footer{padding:35px 0 55px;color:#80968b;border-top:1px solid rgba(255,255,255,.06);font-size:13px}.footerin{display:flex;justify-content:space-between;gap:20px}
-@media(max-width:800px){.navlinks{display:none}.hero{padding:75px 0}.grid2,.cards{grid-template-columns:1fr}.regions{grid-template-columns:1fr 1fr}.footerin{flex-direction:column}.wrap{padding:0 18px}}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="GAIA TALENTS BRASIL — pessoas, ideias e contribuições para transformar realidades.">
+  <title>GAIA TALENTS BRASIL | Sua ideia pode virar uma solução</title>
+
+  <style>
+    :root{
+      --bg:#07100d;
+      --bg2:#0d1814;
+      --card:#12221b;
+      --text:#f4f7f5;
+      --muted:#b8c5bf;
+      --accent:#c8a85b;
+      --accent2:#e1c879;
+      --line:rgba(255,255,255,.10);
+      --max:1050px;
+    }
+
+    *{box-sizing:border-box}
+
+    html{
+      scroll-behavior:smooth;
+    }
+
+    body{
+      margin:0;
+      font-family:Arial,Helvetica,sans-serif;
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.6;
+    }
+
+    a{
+      color:inherit;
+      text-decoration:none;
+    }
+
+    .wrap{
+      width:min(92%,var(--max));
+      margin:auto;
+    }
+
+    nav{
+      position:sticky;
+      top:0;
+      z-index:20;
+      background:rgba(7,16,13,.94);
+      border-bottom:1px solid var(--line);
+      backdrop-filter:blur(8px);
+    }
+
+    .navin{
+      min-height:68px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:20px;
+    }
+
+    .brand{
+      font-weight:800;
+      letter-spacing:.05em;
+      font-size:14px;
+    }
+
+    .navlinks{
+      display:flex;
+      gap:22px;
+      font-size:13px;
+      color:var(--muted);
+    }
+
+    .navlinks a:hover{
+      color:var(--text);
+    }
+
+    header{
+      padding:90px 0 75px;
+      background:
+        radial-gradient(circle at 50% 0,rgba(200,168,91,.17),transparent 45%),
+        linear-gradient(180deg,var(--bg2),var(--bg));
+      text-align:center;
+    }
+
+    .eyebrow{
+      display:inline-block;
+      color:var(--accent2);
+      font-size:13px;
+      font-weight:800;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+      margin-bottom:18px;
+    }
+
+    h1{
+      max-width:900px;
+      margin:0 auto 20px;
+      font-size:clamp(42px,8vw,78px);
+      line-height:.98;
+      letter-spacing:-.04em;
+    }
+
+    .lead{
+      max-width:720px;
+      margin:0 auto 30px;
+      color:var(--muted);
+      font-size:clamp(18px,3vw,24px);
+    }
+
+    .btn{
+      display:inline-block;
+      background:var(--accent);
+      color:#111;
+      padding:14px 22px;
+      border-radius:8px;
+      font-weight:800;
+      border:0;
+      cursor:pointer;
+      font:inherit;
+    }
+
+    .btn:hover{
+      background:var(--accent2);
+    }
+
+    section{
+      padding:70px 0;
+      border-top:1px solid var(--line);
+    }
+
+    h2{
+      margin:0 0 18px;
+      font-size:clamp(30px,5vw,48px);
+      line-height:1.05;
+    }
+
+    .intro{
+      max-width:760px;
+      color:var(--muted);
+      font-size:18px;
+    }
+
+    .notice{
+      margin-top:30px;
+      padding:26px;
+      border:1px solid rgba(225,200,121,.35);
+      background:rgba(200,168,91,.08);
+      border-radius:12px;
+    }
+
+    .notice strong{
+      display:block;
+      color:var(--accent2);
+      font-size:20px;
+      margin-bottom:8px;
+    }
+
+    .steps{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:16px;
+      margin-top:35px;
+    }
+
+    .card{
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:12px;
+      padding:25px;
+    }
+
+    .number{
+      color:var(--accent2);
+      font-weight:900;
+      font-size:14px;
+      letter-spacing:.1em;
+    }
+
+    .card h3{
+      margin:9px 0 8px;
+      font-size:21px;
+    }
+
+    .card p{
+      margin:0;
+      color:var(--muted);
+    }
+
+    .quote{
+      margin:35px 0 0;
+      padding:34px;
+      border-left:4px solid var(--accent);
+      background:rgba(255,255,255,.035);
+      border-radius:0 12px 12px 0;
+    }
+
+    .quote p{
+      margin:0;
+      font-size:clamp(25px,4vw,38px);
+      font-weight:800;
+      line-height:1.18;
+    }
+
+    .certificate{
+      margin-top:30px;
+      padding:28px;
+      background:var(--card);
+      border-radius:12px;
+      border:1px solid var(--line);
+    }
+
+    .participate{
+      text-align:center;
+      background:
+        radial-gradient(circle at 50% 50%,rgba(200,168,91,.10),transparent 55%);
+    }
+
+    .participate > .wrap > p{
+      max-width:680px;
+      margin:0 auto 25px;
+      color:var(--muted);
+      font-size:18px;
+    }
+
+    .form{
+      max-width:650px;
+      margin:30px auto 0;
+      text-align:left;
+      display:grid;
+      gap:14px;
+    }
+
+    label{
+      font-weight:700;
+      font-size:14px;
+    }
+
+    input,
+    textarea{
+      width:100%;
+      margin-top:6px;
+      padding:13px 14px;
+      border:1px solid var(--line);
+      border-radius:8px;
+      background:#0b1712;
+      color:var(--text);
+      font:inherit;
+    }
+
+    textarea{
+      min-height:130px;
+      resize:vertical;
+    }
+
+    .small{
+      color:#9eaaa5;
+      font-size:13px;
+      margin-top:4px;
+    }
+
+    footer{
+      padding:35px 0 45px;
+      border-top:1px solid var(--line);
+      color:#98a49f;
+      font-size:13px;
+    }
+
+    .signature{
+      margin-top:14px;
+      color:var(--text);
+      font-weight:700;
+    }
+
+    @media(max-width:760px){
+      .navlinks{
+        display:none;
+      }
+
+      header{
+        padding:70px 0 60px;
+      }
+
+      section{
+        padding:55px 0;
+      }
+
+      .steps{
+        grid-template-columns:1fr;
+      }
+
+      .card{
+        padding:21px;
+      }
+    }
+  </style>
 </head>
+
 <body>
-<nav><div class="wrap navin"><div class="brand">GAIA <span>TALENTS BRASIL™</span></div><div class="navlinks"><a href="#por-que">Por quê</a><a href="#como">Como funciona</a><a href="#metodo">Método</a><a href="#seguranca">Privacidade</a><a href="#participar">Participar</a></div></div></nav>
 
-<header class="hero"><div class="wrap">
-<div class="eyebrow">Seleção Nacional • 1ª Edição</div>
-<h1>O talento está espalhado.<br><span>A oportunidade também pode estar.</span></h1>
-<div class="lead">A GAIATECH conecta os dois.</div>
-<div class="chips"><span class="chip">Brasil inteiro</span><span class="chip">Participação online</span><span class="chip">Construção de infraestruturas</span></div>
-<a class="btn" href="#participar">QUERO PARTICIPAR →</a>
-</div></header>
+  <nav>
+    <div class="wrap navin">
+      <div class="brand">GAIA TALENTS BRASIL™</div>
 
-<section><div class="wrap grid2"><div><div class="kicker">Uma convocação</div><h2>Você não está sendo convidado para trabalhar para nós.</h2></div>
-<div><div class="quote">Está sendo convidado para <strong>construir conosco.</strong></div><p>Queremos conhecer jovens capazes de observar uma realidade, fazer perguntas, investigar, aprender, conectar informações e participar da construção de caminhos.</p></div></div></section>
+      <div class="navlinks">
+        <a href="#sobre">O QUE É</a>
+        <a href="#como">COMO FUNCIONA</a>
+        <a href="#certificado">CERTIFICADO</a>
+        <a href="#participar">PARTICIPAR</a>
+      </div>
+    </div>
+  </nav>
 
-<section id="por-que"><div class="wrap"><div class="kicker">Por que existe a GAIA TALENTS BRASIL?</div><h2>O Brasil tem talento. Muito dele está disperso.</h2>
-<p>Existem jovens em diferentes regiões, formações e realidades que ainda não tiveram a oportunidade de colocar seu conhecimento diante de problemas concretos. A GAIA TALENTS cria uma conexão entre pessoas, método, laboratório e realidades.</p>
-<div class="cards"><div class="card"><div class="num">01</div><h3>JOVENS</h3><p>Conhecimento, curiosidade, experiências e perspectivas diferentes.</p></div>
-<div class="card"><div class="num">02</div><h3>REALIDADES</h3><p>Problemas concretos observados por quem vive ou conhece cada território.</p></div>
-<div class="card"><div class="num">03</div><h3>CONSTRUÇÃO</h3><p>Investigação organizada que pode transformar compreensão em infraestrutura.</p></div></div></div></section>
+  <header>
+    <div class="wrap">
 
-<section><div class="wrap grid2"><div><div class="kicker">Uma pergunta</div><h2>Você conhece uma realidade que precisa mudar?</h2></div>
-<div><p>Talvez seja uma realidade do seu bairro, cidade, universidade, empresa, setor ou território. Talvez ninguém de outra região esteja olhando para ela.</p><p><strong>Não queremos apenas sua resposta. Queremos conhecer o seu raciocínio.</strong></p></div></div></section>
+      <div class="eyebrow">
+        Uma oportunidade para contribuir
+      </div>
 
-<section id="como"><div class="wrap"><div class="kicker">Como funciona</div><h2>Da inscrição à construção.</h2>
-<div class="cards"><div class="card"><div class="num">01</div><h3>Inscrição</h3><p>Você apresenta sua trajetória e uma realidade que conhece.</p></div>
-<div class="card"><div class="num">02</div><h3>Desafio</h3><p>Um exercício para revelar como você pensa diante de uma situação concreta.</p></div>
-<div class="card"><div class="num">03</div><h3>Investigação</h3><p>Você aprofunda perguntas, hipóteses e evidências.</p></div>
-<div class="card"><div class="num">04</div><h3>Entrevista</h3><p>Conversamos sobre seu raciocínio, trajetória e capacidade de construção.</p></div>
-<div class="card"><div class="num">05</div><h3>Construção</h3><p>Selecionados poderão ser convidados a continuar a jornada com a GAIATECH GLOBAL.</p></div></div></div></section>
+      <h1>
+        SUA IDEIA PODE VIRAR UMA SOLUÇÃO.
+      </h1>
 
-<section id="metodo"><div class="wrap"><div class="kicker">O nosso olhar</div><h2>Não é sobre ter todas as respostas.</h2>
-<p>É sobre saber como procurar as respostas. Queremos pessoas capazes de reconhecer o que ainda não sabem, fazer as perguntas certas, mudar uma hipótese diante de uma evidência e construir em conjunto.</p>
-<div class="flow"><span>DOR REAL</span><b>→</b><span>INVESTIGAÇÃO</span><b>→</b><span>HIPÓTESE</span><b>→</b><span>EVIDÊNCIA</span><b>→</b><span>CONEXÃO</span><b>→</b><span>LABORATÓRIO</span><b>→</b><span>CONSTRUÇÃO</span><b>→</b><span>INFRAESTRUTURA</span><b>→</b><span>MUDANÇA</span></div></div></section>
+      <p class="lead">
+        Você conhece uma realidade.
+        Percebe um problema.
+        Tem uma ideia.
+        <strong>Apresente.</strong>
+      </p>
 
-<section><div class="wrap"><div class="kicker">Um Brasil. Muitas realidades.</div><h2>E se você for de uma região que ninguém está olhando?</h2>
-<p>Melhor ainda. Queremos conhecer o que você conhece. Uma realidade aparentemente local pode revelar uma questão maior. Uma questão comum a várias regiões pode revelar uma oportunidade de construção nacional.</p>
-<div class="regions"><div class="region">Norte</div><div class="region">Nordeste</div><div class="region">Centro-Oeste</div><div class="region">Sudeste</div><div class="region">Sul</div></div></div></section>
+      <a class="btn" href="#participar">
+        QUERO APRESENTAR MINHA IDEIA
+      </a>
 
-<section><div class="wrap grid2"><div><div class="kicker">Quem procuramos</div><h2>Não estamos procurando uma profissão.</h2></div>
-<div><p>Estamos procurando <strong>capacidade de pensar e disposição para construir.</strong></p><p>Administração, Engenharia, Computação, Economia, Design, Dados, Gestão, Pesquisa, Logística, Comunicação, Desenvolvimento regional e muitas outras formações podem fazer parte dessa rede.</p><p>Sua formação é importante. <strong>Sua capacidade de raciocinar é ainda mais.</strong></p></div></div></section>
+    </div>
+  </header>
 
-<section id="seguranca"><div class="wrap"><div class="kicker">Privacidade • Segurança • Confiança</div><h2>Seus dados merecem proteção.</h2>
-<div class="security"><p><strong>As informações da inscrição serão tratadas de acordo com a LGPD.</strong></p>
-<ul><li>Coleta limitada às finalidades informadas no processo de seleção.</li><li>Acesso restrito a pessoas autorizadas e necessárias ao processo.</li><li>Medidas técnicas e administrativas de segurança para proteção dos dados.</li><li>Quando aplicável e efetivamente configurada na infraestrutura utilizada, proteção criptográfica em trânsito e armazenamento.</li><li>Não comercialização dos dados pessoais.</li><li>Não publicação das respostas individuais.</li><li>Uso de informações agregadas ou anonimizadas para estudos sobre realidades, quando cabível e juridicamente permitido.</li><li>Definição de retenção e eliminação dos dados de acordo com a finalidade e as obrigações aplicáveis.</li><li>Canal para exercício dos direitos do titular previstos na LGPD.</li></ul>
-<p><small>Os mecanismos de segurança serão informados de forma compatível com a infraestrutura efetivamente utilizada. Não serão feitas promessas técnicas que não estejam implementadas.</small></p></div></div></section>
+  <main>
 
-<section><div class="wrap grid2"><div><div class="kicker">Mais do que uma seleção</div><h2>O jovem participa da construção. A realidade também entra no laboratório.</h2></div>
-<div><p>A GAIA TALENTS BRASIL também nasce como uma escuta nacional. As contribuições podem ajudar a identificar questões, capacidades e oportunidades para futuras investigações e construções.</p><p>Participantes que cumprirem os requisitos definidos no regulamento receberão certificado digital de participação. Reconhecimentos adicionais poderão ser concedidos conforme os critérios da seleção.</p></div></div></section>
+    <section id="sobre">
+      <div class="wrap">
 
-<section><div class="wrap"><div class="kicker">De Serra para o Brasil</div><h2>Uma origem. Muitas possibilidades.</h2>
-<p>A GAIA TALENTS BRASIL nasce em Serra — Espírito Santo — Brasil, mas olha para o país inteiro. Queremos conectar talentos, territórios e realidades em torno de um objetivo comum: construir infraestruturas capazes de produzir mudança.</p></div></section>
+        <h2>
+          O que é o GAIA TALENTS BRASIL?
+        </h2>
 
-<section id="participar" class="cta"><div class="wrap"><div class="kicker">Pronto para participar?</div><h2>Mostre-nos como você pensa.</h2>
-<p>A inscrição oficial será disponibilizada nesta página após a publicação do regulamento e da estrutura definitiva de proteção de dados.</p><a class="btn" href="#participar">QUERO PARTICIPAR →</a></div></section>
+        <p class="intro">
+          Identificamos pessoas que têm vontade de pensar,
+          raciocinar, observar problemas reais e contribuir
+          com ideias para melhorar aquilo que precisa ser transformado.
+        </p>
 
-<footer><div class="wrap footerin"><div><strong>GAIA TALENTS BRASIL™</strong><br>Seleção Nacional de Jovens para Construção de Infraestruturas</div><div>Iniciativa da GAIATECH GLOBAL<br>Serra — Espírito Santo — Brasil • 2026</div></div></footer>
-</body></html>
+        <div class="notice">
+
+          <strong>
+            IMPORTANTE: NÃO É VAGA DE EMPREGO.
+          </strong>
+
+          A participação não é promessa de contratação,
+          não garante emprego, salário ou remuneração.
+          Também não é necessário pagar para participar.
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <section id="como">
+      <div class="wrap">
+
+        <h2>
+          É simples.
+        </h2>
+
+        <div class="steps">
+
+          <article class="card">
+
+            <div class="number">
+              01
+            </div>
+
+            <h3>
+              Observe
+            </h3>
+
+            <p>
+              Perceba uma necessidade ou um problema
+              que você conhece de perto.
+            </p>
+
+          </article>
+
+
+          <article class="card">
+
+            <div class="number">
+              02
+            </div>
+
+            <h3>
+              Pense
+            </h3>
+
+            <p>
+              Raciocine sobre o que poderia ser feito
+              para melhorar essa realidade.
+            </p>
+
+          </article>
+
+
+          <article class="card">
+
+            <div class="number">
+              03
+            </div>
+
+            <h3>
+              Apresente
+            </h3>
+
+            <p>
+              Conte sua ideia de forma simples.
+              Ela poderá contribuir para uma solução.
+            </p>
+
+          </article>
+
+        </div>
+
+
+        <div class="quote">
+
+          <p>
+            “EU AJUDEI. EU CONTRIBUÍ. EU FIZ PARTE.”
+          </p>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <section>
+      <div class="wrap">
+
+        <h2>
+          Talento está em todo lugar.
+        </h2>
+
+        <p class="intro">
+          Não importa sua idade, profissão, escolaridade
+          ou condição financeira.
+          Uma pessoa simples pode perceber algo
+          que outras pessoas não perceberam.
+        </p>
+
+
+        <div class="quote">
+
+          <p>
+            Um pedreiro pode construir uma grande mansão
+            e, quando termina, olhar para aquela obra e dizer:
+            <br><br>
+
+            <strong>
+              “FUI EU QUE FIZ.”
+            </strong>
+          </p>
+
+        </div>
+
+
+        <p class="intro" style="margin-top:28px">
+
+          É esse sentimento que queremos despertar:
+          a oportunidade de participar, contribuir
+          e deixar sua marca em algo que pode fazer diferença.
+
+        </p>
+
+      </div>
+    </section>
+
+
+    <section id="certificado">
+      <div class="wrap">
+
+        <h2>
+          Reconhecimento
+        </h2>
+
+        <p class="intro">
+
+          Quem cumprir as etapas previstas poderá receber
+          certificado de participação ou reconhecimento,
+          conforme as regras da iniciativa.
+
+        </p>
+
+
+        <div class="certificate">
+
+          <strong>
+            Por que isso pode ser importante?
+          </strong>
+
+          <p style="color:var(--muted)">
+
+            O certificado poderá registrar essa experiência
+            na sua trajetória e no seu currículo,
+            demonstrando sua participação em uma iniciativa
+            voltada à observação da realidade,
+            desenvolvimento de ideias, raciocínio
+            e contribuição para possíveis soluções.
+
+          </p>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <section id="participar" class="participate">
+
+      <div class="wrap">
+
+        <h2>
+          Tem uma ideia?
+        </h2>
+
+        <p>
+
+          Conte o que você percebe,
+          explique o problema e apresente sua ideia.
+
+          Uma grande transformação pode começar
+          com uma pessoa dizendo:
+
+          <strong>
+            “EU TENHO UMA IDEIA.”
+          </strong>
+
+        </p>
+
+
+        <form
+          class="form"
+          action="mailto:gaiatechglobal@gmail.com"
+          method="post"
+          enctype="text/plain"
+        >
+
+          <div>
+
+            <label for="nome">
+              Seu nome
+            </label>
+
+            <input
+              id="nome"
+              name="Nome"
+              type="text"
+              required
+            >
+
+          </div>
+
+
+          <div>
+
+            <label for="local">
+              Cidade e estado
+            </label>
+
+            <input
+              id="local"
+              name="Cidade e Estado"
+              type="text"
+              required
+            >
+
+          </div>
+
+
+          <div>
+
+            <label for="ideia">
+              Conte sua ideia
+            </label>
+
+            <textarea
+              id="ideia"
+              name="Ideia"
+              required
+            ></textarea>
+
+          </div>
+
+
+          <button
+            class="btn"
+            type="submit"
+          >
+            APRESENTAR MINHA IDEIA
+          </button>
+
+
+          <div class="small">
+
+            O envio abre o aplicativo de e-mail do seu aparelho.
+            A apresentação da ideia não garante contratação,
+            remuneração ou implementação.
+
+          </div>
+
+        </form>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <footer>
+
+    <div class="wrap">
+
+      <div>
+        GAIA TALENTS BRASIL™
+      </div>
+
+      <div class="signature">
+        Direção Geral — Reinaldo Adeodato — CEO/FOUNDER GAIATECH GLOBAL
+      </div>
+
+    </div>
+
+  </footer>
+
+</body>
+</html>
