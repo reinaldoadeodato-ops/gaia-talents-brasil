@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <meta name="description" content="GAIA TALENTS BRASIL — pessoas, ideias e contribuições para transformar realidades.">
+  <meta name="description" content="GAIA TALENTS BRASIL — um espaço para apresentar realidades, problemas, ideias, soluções, habilidades e experiências.">
 
-  <title>GAIA TALENTS BRASIL | Sua ideia pode virar uma solução</title>
+  <title>GAIA TALENTS BRASIL | Quem pode contribuir?</title>
 
   <style>
     :root{
@@ -84,8 +84,16 @@
     header{
       padding:90px 0 75px;
       background:
-        radial-gradient(circle at 50% 0,rgba(200,168,91,.17),transparent 45%),
-        linear-gradient(180deg,var(--bg2),var(--bg));
+        radial-gradient(
+          circle at 50% 0,
+          rgba(200,168,91,.17),
+          transparent 45%
+        ),
+        linear-gradient(
+          180deg,
+          var(--bg2),
+          var(--bg)
+        );
       text-align:center;
     }
 
@@ -108,7 +116,7 @@
     }
 
     .lead{
-      max-width:720px;
+      max-width:760px;
       margin:0 auto 30px;
       color:var(--muted);
       font-size:clamp(18px,3vw,24px);
@@ -142,7 +150,7 @@
     }
 
     .intro{
-      max-width:760px;
+      max-width:800px;
       color:var(--muted);
       font-size:18px;
     }
@@ -208,6 +216,31 @@
       line-height:1.18;
     }
 
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:16px;
+      margin-top:30px;
+    }
+
+    .highlight{
+      margin-top:30px;
+      padding:28px;
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:12px;
+    }
+
+    .highlight strong{
+      color:var(--accent2);
+      font-size:20px;
+    }
+
+    .highlight p{
+      color:var(--muted);
+      margin-bottom:0;
+    }
+
     .certificate{
       margin-top:30px;
       padding:28px;
@@ -216,14 +249,36 @@
       border:1px solid var(--line);
     }
 
+    .certificate strong{
+      color:var(--accent2);
+      font-size:20px;
+    }
+
+    .plate{
+      margin-top:16px;
+      padding:28px;
+      background:rgba(200,168,91,.08);
+      border-radius:12px;
+      border:1px solid rgba(225,200,121,.30);
+    }
+
+    .plate strong{
+      color:var(--accent2);
+      font-size:20px;
+    }
+
     .participate{
       text-align:center;
       background:
-        radial-gradient(circle at 50% 50%,rgba(200,168,91,.10),transparent 55%);
+        radial-gradient(
+          circle at 50% 50%,
+          rgba(200,168,91,.10),
+          transparent 55%
+        );
     }
 
-    .participate p{
-      max-width:680px;
+    .participate > .wrap > p{
+      max-width:720px;
       margin:0 auto 25px;
       color:var(--muted);
       font-size:18px;
@@ -243,7 +298,8 @@
     }
 
     input,
-    textarea{
+    textarea,
+    select{
       width:100%;
       margin-top:6px;
       padding:13px 14px;
@@ -255,7 +311,8 @@
     }
 
     input:focus,
-    textarea:focus{
+    textarea:focus,
+    select:focus{
       outline:2px solid rgba(225,200,121,.45);
       border-color:var(--accent);
     }
@@ -302,6 +359,7 @@
       color:#9eaaa5;
       font-size:13px;
       margin-top:4px;
+      text-align:center;
     }
 
     footer{
@@ -318,7 +376,7 @@
     }
 
     .footer-note{
-      max-width:760px;
+      max-width:800px;
       margin-top:16px;
       line-height:1.6;
     }
@@ -337,7 +395,8 @@
         padding:55px 0;
       }
 
-      .steps{
+      .steps,
+      .grid{
         grid-template-columns:1fr;
       }
 
@@ -362,10 +421,23 @@
       </div>
 
       <div class="navlinks">
-        <a href="#sobre">O QUE É</a>
-        <a href="#como">COMO FUNCIONA</a>
-        <a href="#certificado">RECONHECIMENTO</a>
-        <a href="#participar">PARTICIPAR</a>
+
+        <a href="#sobre">
+          O QUE É
+        </a>
+
+        <a href="#como">
+          COMO FUNCIONA
+        </a>
+
+        <a href="#reconhecimento">
+          RECONHECIMENTO
+        </a>
+
+        <a href="#participar">
+          PARTICIPAR
+        </a>
+
       </div>
 
     </div>
@@ -377,22 +449,32 @@
     <div class="wrap">
 
       <div class="eyebrow">
-        Pessoas • Ideias • Contribuições
+        GAIA TALENTS BRASIL™
       </div>
 
       <h1>
-        SUA IDEIA PODE VIRAR UMA SOLUÇÃO.
+        UMA REALIDADE PRECISA DE UMA SOLUÇÃO.
       </h1>
 
       <p class="lead">
-        Você conhece uma realidade.
-        Percebe um problema.
-        Tem uma ideia.
-        <strong>Apresente.</strong>
+
+        <strong>
+          QUEM PODE CONTRIBUIR?
+        </strong>
+
+        <br>
+
+        Apresente uma realidade, um problema,
+        uma ideia, uma solução, uma habilidade
+        ou uma experiência.
+
       </p>
 
-      <a class="btn" href="#participar">
-        QUERO APRESENTAR MINHA IDEIA
+      <a
+        class="btn"
+        href="#participar"
+      >
+        APRESENTAR MINHA CONTRIBUIÇÃO
       </a>
 
     </div>
@@ -412,24 +494,37 @@
         </h2>
 
         <p class="intro">
-          Identificamos pessoas que têm vontade de pensar,
-          raciocinar, observar problemas reais e contribuir
-          com ideias para melhorar aquilo que precisa ser transformado.
+
+          O GAIA TALENTS BRASIL é uma iniciativa
+          para conhecer pessoas e descobrir capacidades.
+
+        </p>
+
+        <p class="intro">
+
+          Uma realidade pode ser apresentada por qualquer pessoa.
+          Uma solução pode vir de qualquer pessoa.
+          Uma habilidade pode aparecer em qualquer lugar.
+
+        </p>
+
+        <p class="intro">
+
+          Jovem, adulto ou idoso.
+          Estudante, profissional, empreendedor
+          ou alguém com experiência de vida.
+
         </p>
 
 
         <div class="notice">
 
           <strong>
-            IMPORTANTE: NÃO É VAGA DE EMPREGO.
+            NÃO É VAGA DE EMPREGO.
           </strong>
 
-          A participação não é promessa de contratação,
-          não garante emprego, salário ou remuneração.
-
-          <br><br>
-
-          Também não é necessário pagar para participar.
+          É um espaço aberto para que pessoas apresentem
+          aquilo que conhecem, pensam e sabem fazer.
 
         </div>
 
@@ -443,11 +538,12 @@
       <div class="wrap">
 
         <h2>
-          É simples.
+          Como funciona?
         </h2>
 
 
         <div class="steps">
+
 
           <article class="card">
 
@@ -456,12 +552,15 @@
             </div>
 
             <h3>
-              Observe
+              APRESENTE
             </h3>
 
             <p>
-              Perceba uma necessidade ou um problema
-              que você conhece de perto.
+
+              Uma realidade, um problema,
+              uma ideia, uma solução,
+              uma habilidade ou uma experiência.
+
             </p>
 
           </article>
@@ -474,12 +573,14 @@
             </div>
 
             <h3>
-              Pense
+              MOSTRE
             </h3>
 
             <p>
-              Raciocine sobre o que poderia ser feito
-              para melhorar essa realidade.
+
+              Mostre como você enxerga a situação,
+              como pensa e o que sabe fazer.
+
             </p>
 
           </article>
@@ -492,15 +593,18 @@
             </div>
 
             <h3>
-              Apresente
+              CONTRIBUA
             </h3>
 
             <p>
-              Conte sua ideia de forma simples.
-              Ela poderá contribuir para uma solução.
+
+              Sua contribuição pode ajudar a aproximar
+              diferentes conhecimentos e capacidades.
+
             </p>
 
           </article>
+
 
         </div>
 
@@ -508,9 +612,10 @@
         <div class="quote">
 
           <p>
-            “EU AJUDEI.
-            EU CONTRIBUÍ.
-            EU FIZ PARTE.”
+
+            UMA REALIDADE PODE ENCONTRAR
+            QUEM SABE COMO CONTRIBUIR.
+
           </p>
 
         </div>
@@ -525,52 +630,131 @@
       <div class="wrap">
 
         <h2>
-          Talento está em todo lugar.
+          Não precisa saber tudo.
         </h2>
 
         <p class="intro">
 
-          Não importa sua idade, profissão,
-          escolaridade ou condição financeira.
-
-          Uma pessoa simples pode perceber algo
-          que outras pessoas não perceberam.
+          Quem conhece uma realidade pode apresentá-la.
+          Quem entende de uma área pode apresentar uma solução.
+          Quem possui uma habilidade pode mostrar o que sabe fazer.
 
         </p>
 
 
-        <div class="quote">
+        <div class="grid">
 
-          <p>
 
-            Um pedreiro pode construir uma grande mansão
-            e, quando termina, olhar para aquela obra e dizer:
+          <article class="card">
 
-            <br><br>
+            <h3>
+              VOCÊ CONHECE O PROBLEMA?
+            </h3>
 
-            <strong>
-              “FUI EU QUE FIZ.”
-            </strong>
+            <p>
+              Apresente a realidade que você conhece.
+            </p>
 
-          </p>
+          </article>
+
+
+          <article class="card">
+
+            <h3>
+              VOCÊ TEM UMA SOLUÇÃO?
+            </h3>
+
+            <p>
+              Mostre como você resolveria.
+            </p>
+
+          </article>
+
+
+          <article class="card">
+
+            <h3>
+              VOCÊ TEM UMA HABILIDADE?
+            </h3>
+
+            <p>
+              Apresente aquilo que sabe fazer.
+            </p>
+
+          </article>
+
+
+          <article class="card">
+
+            <h3>
+              VOCÊ TEM EXPERIÊNCIA?
+            </h3>
+
+            <p>
+              Conte o que aprendeu fazendo.
+            </p>
+
+          </article>
+
 
         </div>
-
-
-        <p class="intro" style="margin-top:28px">
-
-          É esse sentimento que queremos despertar:
-          a oportunidade de participar, contribuir
-          e deixar sua marca em algo que pode fazer diferença.
-
-        </p>
 
       </div>
 
     </section>
 
 
-    <section id="certificado">
+    <section>
+
+      <div class="wrap">
+
+        <h2>
+          Um exemplo.
+        </h2>
+
+        <p class="intro">
+
+          Uma pessoa pode apresentar um problema de uma cidade.
+          Outra pode conhecer profundamente aquela área.
+          Outra pode ter uma ideia.
+          Outra pode saber construir a solução.
+
+        </p>
+
+
+        <div class="highlight">
+
+          <strong>
+            NÃO IMPORTA QUEM APARECE PRIMEIRO.
+          </strong>
+
+          <p>
+
+            O importante é que uma realidade encontre
+            pessoas capazes de contribuir.
+
+          </p>
+
+        </div>
+
+
+        <div class="quote">
+
+          <p>
+
+            QUEM TEM UMA CONTRIBUIÇÃO,
+            TEM ESPAÇO PARA APRESENTÁ-LA.
+
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <section id="reconhecimento">
 
       <div class="wrap">
 
@@ -578,29 +762,35 @@
           Reconhecimento
         </h2>
 
-        <p class="intro">
-
-          Quem cumprir as etapas previstas poderá receber
-          certificado de participação ou reconhecimento,
-          conforme as regras da iniciativa.
-
-        </p>
-
 
         <div class="certificate">
 
           <strong>
-            Por que isso pode ser importante?
+            CERTIFICADO
           </strong>
 
           <p style="color:var(--muted)">
 
-            O certificado poderá registrar essa experiência
-            na sua trajetória e no seu currículo,
-            demonstrando sua participação em uma iniciativa
-            voltada à observação da realidade,
-            desenvolvimento de ideias, raciocínio
-            e contribuição para possíveis soluções.
+            Participantes que cumprirem as condições previstas
+            na iniciativa poderão receber certificado de participação
+            e reconhecimento, conforme as regras estabelecidas.
+
+          </p>
+
+        </div>
+
+
+        <div class="plate">
+
+          <strong>
+            PLACA DE RECONHECIMENTO
+          </strong>
+
+          <p style="color:var(--muted)">
+
+            Contribuições de destaque poderão receber uma placa
+            de reconhecimento, conforme os critérios definidos
+            para a iniciativa.
 
           </p>
 
@@ -611,43 +801,33 @@
     </section>
 
 
-    <section id="participar" class="participate">
+    <section
+      id="participar"
+      class="participate"
+    >
 
       <div class="wrap">
 
         <h2>
-          Tem uma ideia?
+          Tem uma contribuição?
         </h2>
 
         <p>
 
-          Conte o que você percebe,
-          explique o problema e apresente sua ideia.
+          Conte o que você quer apresentar.
 
-          Uma grande transformação pode começar
-          com uma pessoa dizendo:
-
-          <strong>
-            “EU TENHO UMA IDEIA.”
-          </strong>
+          Pode ser uma realidade, um problema,
+          uma ideia, uma solução, uma habilidade
+          ou uma experiência.
 
         </p>
 
-
-        <!--
-          FORMULÁRIO SEGURO:
-          O envio NÃO utiliza mailto.
-          Os dados são enviados por HTTPS/POST
-          ao serviço de formulário.
-        -->
 
         <form
           class="form"
           action="https://formsubmit.co/gaiatechglobal@gmail.com"
           method="POST"
         >
-
-          <!-- CONFIGURAÇÕES DO FORMULÁRIO -->
 
           <input
             type="hidden"
@@ -710,13 +890,58 @@
 
           <div>
 
-            <label for="ideia">
-              Conte sua ideia
+            <label for="tipo">
+              O que você quer apresentar?
+            </label>
+
+            <select
+              id="tipo"
+              name="Tipo de contribuição"
+              required
+            >
+
+              <option value="">
+                Escolha uma opção
+              </option>
+
+              <option>
+                Uma realidade
+              </option>
+
+              <option>
+                Um problema
+              </option>
+
+              <option>
+                Uma ideia
+              </option>
+
+              <option>
+                Uma solução
+              </option>
+
+              <option>
+                Uma habilidade
+              </option>
+
+              <option>
+                Uma experiência
+              </option>
+
+            </select>
+
+          </div>
+
+
+          <div>
+
+            <label for="contribuicao">
+              Conte para nós
             </label>
 
             <textarea
-              id="ideia"
-              name="Ideia"
+              id="contribuicao"
+              name="Contribuição"
               required
             ></textarea>
 
@@ -735,10 +960,8 @@
 
             <label for="consentimento">
 
-              Declaro que estou de acordo com o envio
-              dos dados informados para que a GAIATECH GLOBAL
-              possa receber, analisar e, se necessário,
-              entrar em contato sobre a contribuição apresentada.
+              Concordo com o envio das informações
+              para participação no GAIA TALENTS BRASIL.
 
             </label>
 
@@ -748,21 +971,18 @@
           <div class="security">
 
             <strong>
-              🔒 Proteção das informações
+              Proteção das informações
             </strong>
 
             <br>
 
-            O envio deste formulário é realizado por
-            conexão HTTPS. Os dados informados são utilizados
-            para receber e analisar a contribuição apresentada
-            ao GAIA TALENTS BRASIL.
+            O envio deste formulário é realizado
+            por conexão HTTPS.
 
             <br><br>
 
-            Não envie neste formulário senhas, documentos,
-            dados bancários ou informações pessoais sensíveis
-            que não sejam necessárias para a apresentação da ideia.
+            Não envie senhas, documentos, dados bancários
+            ou outras informações pessoais sensíveis.
 
           </div>
 
@@ -771,18 +991,23 @@
             class="btn"
             type="submit"
           >
-            APRESENTAR MINHA IDEIA
+            APRESENTAR MINHA CONTRIBUIÇÃO
           </button>
 
 
           <div class="small">
 
-            A apresentação de uma ideia não garante contratação,
-            remuneração, emprego ou implementação da proposta.
+            Preencheu a ideia.
 
             <br>
 
-            A participação é gratuita.
+            <strong>
+              NÃO É VAGA DE EMPREGO.
+            </strong>
+
+            <br>
+
+            OBRIGADO.
 
           </div>
 
@@ -810,12 +1035,9 @@
 
       <div class="footer-note">
 
-        As informações enviadas pelo formulário são destinadas
-        ao recebimento e análise das contribuições apresentadas
-        no âmbito do GAIA TALENTS BRASIL.
-
-        A iniciativa não constitui oferta de emprego,
-        promessa de contratação ou garantia de remuneração.
+        GAIA TALENTS BRASIL™ — uma iniciativa da GAIATECH GLOBAL
+        para conhecer pessoas, capacidades, conhecimentos,
+        experiências e contribuições.
 
       </div>
 
