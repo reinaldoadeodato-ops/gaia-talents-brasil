@@ -1,6 +1,797 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="description" content="GAIA TALENTS BRASIL — pessoas, ideias e contribuições para transformar realidades.">
+
+  <title>GAIA TALENTS BRASIL | Sua ideia pode virar uma solução</title>
+
+  <style>
+    :root{
+      --bg:#07100d;
+      --bg2:#0d1814;
+      --card:#12221b;
+      --text:#f4f7f5;
+      --muted:#b8c5bf;
+      --accent:#c8a85b;
+      --accent2:#e1c879;
+      --line:rgba(255,255,255,.10);
+      --max:1050px;
+    }
+
+    *{
+      box-sizing:border-box;
+    }
+
+    html{
+      scroll-behavior:smooth;
+    }
+
+    body{
+      margin:0;
+      font-family:Arial,Helvetica,sans-serif;
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.6;
+    }
+
+    a{
+      color:inherit;
+      text-decoration:none;
+    }
+
+    .wrap{
+      width:min(92%,var(--max));
+      margin:auto;
+    }
+
+    nav{
+      position:sticky;
+      top:0;
+      z-index:20;
+      background:rgba(7,16,13,.96);
+      border-bottom:1px solid var(--line);
+      backdrop-filter:blur(8px);
+    }
+
+    .navin{
+      min-height:68px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:20px;
+    }
+
+    .brand{
+      font-weight:800;
+      letter-spacing:.05em;
+      font-size:14px;
+    }
+
+    .navlinks{
+      display:flex;
+      gap:22px;
+      font-size:13px;
+      color:var(--muted);
+    }
+
+    .navlinks a:hover{
+      color:var(--text);
+    }
+
+    header{
+      padding:90px 0 75px;
+      background:
+        radial-gradient(circle at 50% 0,rgba(200,168,91,.17),transparent 45%),
+        linear-gradient(180deg,var(--bg2),var(--bg));
+      text-align:center;
+    }
+
+    .eyebrow{
+      display:inline-block;
+      color:var(--accent2);
+      font-size:13px;
+      font-weight:800;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+      margin-bottom:18px;
+    }
+
+    h1{
+      max-width:900px;
+      margin:0 auto 20px;
+      font-size:clamp(42px,8vw,78px);
+      line-height:.98;
+      letter-spacing:-.04em;
+    }
+
+    .lead{
+      max-width:720px;
+      margin:0 auto 30px;
+      color:var(--muted);
+      font-size:clamp(18px,3vw,24px);
+    }
+
+    .btn{
+      display:inline-block;
+      background:var(--accent);
+      color:#111;
+      padding:14px 22px;
+      border-radius:8px;
+      font-weight:800;
+      border:0;
+      cursor:pointer;
+      font-size:15px;
+    }
+
+    .btn:hover{
+      background:var(--accent2);
+    }
+
+    section{
+      padding:70px 0;
+      border-top:1px solid var(--line);
+    }
+
+    h2{
+      margin:0 0 18px;
+      font-size:clamp(30px,5vw,48px);
+      line-height:1.05;
+    }
+
+    .intro{
+      max-width:760px;
+      color:var(--muted);
+      font-size:18px;
+    }
+
+    .notice{
+      margin-top:30px;
+      padding:26px;
+      border:1px solid rgba(225,200,121,.35);
+      background:rgba(200,168,91,.08);
+      border-radius:12px;
+    }
+
+    .notice strong{
+      display:block;
+      color:var(--accent2);
+      font-size:20px;
+      margin-bottom:8px;
+    }
+
+    .steps{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:16px;
+      margin-top:35px;
+    }
+
+    .card{
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:12px;
+      padding:25px;
+    }
+
+    .number{
+      color:var(--accent2);
+      font-weight:900;
+      font-size:14px;
+      letter-spacing:.1em;
+    }
+
+    .card h3{
+      margin:9px 0 8px;
+      font-size:21px;
+    }
+
+    .card p{
+      margin:0;
+      color:var(--muted);
+    }
+
+    .quote{
+      margin:35px 0 0;
+      padding:34px;
+      border-left:4px solid var(--accent);
+      background:rgba(255,255,255,.035);
+      border-radius:0 12px 12px 0;
+    }
+
+    .quote p{
+      margin:0;
+      font-size:clamp(25px,4vw,38px);
+      font-weight:800;
+      line-height:1.18;
+    }
+
+    .certificate{
+      margin-top:30px;
+      padding:28px;
+      background:var(--card);
+      border-radius:12px;
+      border:1px solid var(--line);
+    }
+
+    .participate{
+      text-align:center;
+      background:
+        radial-gradient(circle at 50% 50%,rgba(200,168,91,.10),transparent 55%);
+    }
+
+    .participate p{
+      max-width:680px;
+      margin:0 auto 25px;
+      color:var(--muted);
+      font-size:18px;
+    }
+
+    .form{
+      max-width:650px;
+      margin:30px auto 0;
+      text-align:left;
+      display:grid;
+      gap:16px;
+    }
+
+    label{
+      font-weight:700;
+      font-size:14px;
+    }
+
+    input,
+    textarea{
+      width:100%;
+      margin-top:6px;
+      padding:13px 14px;
+      border:1px solid var(--line);
+      border-radius:8px;
+      background:#0b1712;
+      color:var(--text);
+      font:inherit;
+    }
+
+    input:focus,
+    textarea:focus{
+      outline:2px solid rgba(225,200,121,.45);
+      border-color:var(--accent);
+    }
+
+    textarea{
+      min-height:150px;
+      resize:vertical;
+    }
+
+    .consent{
+      display:flex;
+      align-items:flex-start;
+      gap:10px;
+      padding:14px;
+      background:rgba(255,255,255,.035);
+      border:1px solid var(--line);
+      border-radius:8px;
+      color:var(--muted);
+      font-size:13px;
+    }
+
+    .consent input{
+      width:auto;
+      margin:3px 0 0;
+      flex-shrink:0;
+    }
+
+    .security{
+      margin-top:8px;
+      padding:16px;
+      border-radius:8px;
+      background:rgba(45,120,80,.10);
+      border:1px solid rgba(100,180,130,.20);
+      color:#b9d5c4;
+      font-size:13px;
+      line-height:1.5;
+    }
+
+    .security strong{
+      color:#d7eadc;
+    }
+
+    .small{
+      color:#9eaaa5;
+      font-size:13px;
+      margin-top:4px;
+    }
+
+    footer{
+      padding:35px 0 45px;
+      border-top:1px solid var(--line);
+      color:#98a49f;
+      font-size:13px;
+    }
+
+    .signature{
+      margin-top:14px;
+      color:var(--text);
+      font-weight:700;
+    }
+
+    .footer-note{
+      max-width:760px;
+      margin-top:16px;
+      line-height:1.6;
+    }
+
+    @media(max-width:760px){
+
+      .navlinks{
+        display:none;
+      }
+
+      header{
+        padding:70px 0 60px;
+      }
+
+      section{
+        padding:55px 0;
+      }
+
+      .steps{
+        grid-template-columns:1fr;
+      }
+
+      .card{
+        padding:21px;
+      }
+
+      h1{
+        font-size:clamp(40px,13vw,60px);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <div class="wrap navin">
+
+      <div class="brand">
+        GAIA TALENTS BRASIL™
+      </div>
+
+      <div class="navlinks">
+        <a href="#sobre">O QUE É</a>
+        <a href="#como">COMO FUNCIONA</a>
+        <a href="#certificado">RECONHECIMENTO</a>
+        <a href="#participar">PARTICIPAR</a>
+      </div>
+
+    </div>
+  </nav>
+
+
+  <header>
+
+    <div class="wrap">
+
+      <div class="eyebrow">
+        Pessoas • Ideias • Contribuições
+      </div>
+
+      <h1>
+        SUA IDEIA PODE VIRAR UMA SOLUÇÃO.
+      </h1>
+
+      <p class="lead">
+        Você conhece uma realidade.
+        Percebe um problema.
+        Tem uma ideia.
+        <strong>Apresente.</strong>
+      </p>
+
+      <a class="btn" href="#participar">
+        QUERO APRESENTAR MINHA IDEIA
+      </a>
+
+    </div>
+
+  </header>
+
+
+  <main>
+
+
+    <section id="sobre">
+
+      <div class="wrap">
+
+        <h2>
+          O que é o GAIA TALENTS BRASIL?
+        </h2>
+
+        <p class="intro">
+          Identificamos pessoas que têm vontade de pensar,
+          raciocinar, observar problemas reais e contribuir
+          com ideias para melhorar aquilo que precisa ser transformado.
+        </p>
+
+
+        <div class="notice">
+
+          <strong>
+            IMPORTANTE: NÃO É VAGA DE EMPREGO.
+          </strong>
+
+          A participação não é promessa de contratação,
+          não garante emprego, salário ou remuneração.
+
+          <br><br>
+
+          Também não é necessário pagar para participar.
+
+        </div>
+
       </div>
 
     </section>
+
+
+    <section id="como">
+
+      <div class="wrap">
+
+        <h2>
+          É simples.
+        </h2>
+
+
+        <div class="steps">
+
+          <article class="card">
+
+            <div class="number">
+              01
+            </div>
+
+            <h3>
+              Observe
+            </h3>
+
+            <p>
+              Perceba uma necessidade ou um problema
+              que você conhece de perto.
+            </p>
+
+          </article>
+
+
+          <article class="card">
+
+            <div class="number">
+              02
+            </div>
+
+            <h3>
+              Pense
+            </h3>
+
+            <p>
+              Raciocine sobre o que poderia ser feito
+              para melhorar essa realidade.
+            </p>
+
+          </article>
+
+
+          <article class="card">
+
+            <div class="number">
+              03
+            </div>
+
+            <h3>
+              Apresente
+            </h3>
+
+            <p>
+              Conte sua ideia de forma simples.
+              Ela poderá contribuir para uma solução.
+            </p>
+
+          </article>
+
+        </div>
+
+
+        <div class="quote">
+
+          <p>
+            “EU AJUDEI.
+            EU CONTRIBUÍ.
+            EU FIZ PARTE.”
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <section>
+
+      <div class="wrap">
+
+        <h2>
+          Talento está em todo lugar.
+        </h2>
+
+        <p class="intro">
+
+          Não importa sua idade, profissão,
+          escolaridade ou condição financeira.
+
+          Uma pessoa simples pode perceber algo
+          que outras pessoas não perceberam.
+
+        </p>
+
+
+        <div class="quote">
+
+          <p>
+
+            Um pedreiro pode construir uma grande mansão
+            e, quando termina, olhar para aquela obra e dizer:
+
+            <br><br>
+
+            <strong>
+              “FUI EU QUE FIZ.”
+            </strong>
+
+          </p>
+
+        </div>
+
+
+        <p class="intro" style="margin-top:28px">
+
+          É esse sentimento que queremos despertar:
+          a oportunidade de participar, contribuir
+          e deixar sua marca em algo que pode fazer diferença.
+
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <section id="certificado">
+
+      <div class="wrap">
+
+        <h2>
+          Reconhecimento
+        </h2>
+
+        <p class="intro">
+
+          Quem cumprir as etapas previstas poderá receber
+          certificado de participação ou reconhecimento,
+          conforme as regras da iniciativa.
+
+        </p>
+
+
+        <div class="certificate">
+
+          <strong>
+            Por que isso pode ser importante?
+          </strong>
+
+          <p style="color:var(--muted)">
+
+            O certificado poderá registrar essa experiência
+            na sua trajetória e no seu currículo,
+            demonstrando sua participação em uma iniciativa
+            voltada à observação da realidade,
+            desenvolvimento de ideias, raciocínio
+            e contribuição para possíveis soluções.
+
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <section id="participar" class="participate">
+
+      <div class="wrap">
+
+        <h2>
+          Tem uma ideia?
+        </h2>
+
+        <p>
+
+          Conte o que você percebe,
+          explique o problema e apresente sua ideia.
+
+          Uma grande transformação pode começar
+          com uma pessoa dizendo:
+
+          <strong>
+            “EU TENHO UMA IDEIA.”
+          </strong>
+
+        </p>
+
+
+        <!--
+          FORMULÁRIO SEGURO:
+          O envio NÃO utiliza mailto.
+          Os dados são enviados por HTTPS/POST
+          ao serviço de formulário.
+        -->
+
+        <form
+          class="form"
+          action="https://formsubmit.co/gaiatechglobal@gmail.com"
+          method="POST"
+        >
+
+          <!-- CONFIGURAÇÕES DO FORMULÁRIO -->
+
+          <input
+            type="hidden"
+            name="_subject"
+            value="GAIA TALENTS BRASIL — Nova contribuição"
+          >
+
+          <input
+            type="hidden"
+            name="_template"
+            value="table"
+          >
+
+          <input
+            type="hidden"
+            name="_captcha"
+            value="true"
+          >
+
+          <input
+            type="hidden"
+            name="_url"
+            value="https://reinaldoadeodato-ops.github.io/gaia-talents-brasil/"
+          >
+
+
+          <div>
+
+            <label for="nome">
+              Seu nome
+            </label>
+
+            <input
+              id="nome"
+              name="Nome"
+              type="text"
+              autocomplete="name"
+              required
+            >
+
+          </div>
+
+
+          <div>
+
+            <label for="local">
+              Cidade e estado
+            </label>
+
+            <input
+              id="local"
+              name="Cidade e Estado"
+              type="text"
+              autocomplete="address-level2"
+              required
+            >
+
+          </div>
+
+
+          <div>
+
+            <label for="ideia">
+              Conte sua ideia
+            </label>
+
+            <textarea
+              id="ideia"
+              name="Ideia"
+              required
+            ></textarea>
+
+          </div>
+
+
+          <div class="consent">
+
+            <input
+              id="consentimento"
+              name="Consentimento"
+              type="checkbox"
+              value="Sim"
+              required
+            >
+
+            <label for="consentimento">
+
+              Declaro que estou de acordo com o envio
+              dos dados informados para que a GAIATECH GLOBAL
+              possa receber, analisar e, se necessário,
+              entrar em contato sobre a contribuição apresentada.
+
+            </label>
+
+          </div>
+
+
+          <div class="security">
+
+            <strong>
+              🔒 Proteção das informações
+            </strong>
+
+            <br>
+
+            O envio deste formulário é realizado por
+            conexão HTTPS. Os dados informados são utilizados
+            para receber e analisar a contribuição apresentada
+            ao GAIA TALENTS BRASIL.
+
+            <br><br>
+
+            Não envie neste formulário senhas, documentos,
+            dados bancários ou informações pessoais sensíveis
+            que não sejam necessárias para a apresentação da ideia.
+
+          </div>
+
+
+          <button
+            class="btn"
+            type="submit"
+          >
+            APRESENTAR MINHA IDEIA
+          </button>
+
+
+          <div class="small">
+
+            A apresentação de uma ideia não garante contratação,
+            remuneração, emprego ou implementação da proposta.
+
+            <br>
+
+            A participação é gratuita.
+
+          </div>
+
+        </form>
+
+      </div>
+
+    </section>
+
 
   </main>
 
@@ -17,9 +808,21 @@
         Direção Geral — Reinaldo Adeodato — CEO/FOUNDER GAIATECH GLOBAL
       </div>
 
+      <div class="footer-note">
+
+        As informações enviadas pelo formulário são destinadas
+        ao recebimento e análise das contribuições apresentadas
+        no âmbito do GAIA TALENTS BRASIL.
+
+        A iniciativa não constitui oferta de emprego,
+        promessa de contratação ou garantia de remuneração.
+
+      </div>
+
     </div>
 
   </footer>
+
 
 </body>
 </html>
